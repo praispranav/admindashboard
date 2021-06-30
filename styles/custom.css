@@ -1,77 +1,101 @@
-.bg-content{
-     background: #f3f3f4;
+.bg-content {
+  background: #f3f3f4;
 }
-.bg-nav{
-    background: #2F4050 !important;
-}
-
-.icon-bg{
-    background: #1AB394;
+.bg-nav {
+  background: #2f4050 !important;
 }
 
-.text-grey{
-    color: #888888 !important;
-}
-.extra-small{
-    font-size: 12px;
-}
-.text-grey-dark{
-    color: #5e5c5c;
+.icon-bg {
+  background: #1ab394;
 }
 
-.text-green{
-    color: #1AB394;
+.text-grey {
+  color: #888888 !important;
 }
-a{
-    text-decoration: none;
+.extra-small {
+  font-size: 12px;
 }
-.extra-small-small{
-    font-size: 10px !important;
-}
-
-.text-light-white{
-    color: rgb(226, 218, 218);
-}
-.text-light-black{
-    color:rgb(175, 172, 172);
+.text-grey-dark {
+  color: #5e5c5c;
 }
 
-.accordion-button:active{
-    border: none;
+.text-green {
+  color: #1ab394;
 }
-.accordion-button:focus{
-    border: none;
+a {
+  text-decoration: none;
 }
-button{
-    border: none;
+.extra-small-small {
+  font-size: 10px !important;
 }
-.normal-text{
-    font-size: 17px;
+
+.text-light-white {
+  color: rgb(226, 218, 218);
 }
-.nav-border{
-    border-left: 5px solid #1AB394;
+.text-light-black {
+  color: rgb(175, 172, 172);
 }
-.custom-btn{
-    width: 100%;
-    text-align: left;
-    /* background: !important; */
+
+.accordion-button:active {
+  border: none;
 }
-.custom-btn:hover{
-    background: #283744 !important;
-    transition: 0.6s;
+.accordion-button:focus {
+  border: none;
 }
-.padding-34em{
-    padding-left: 3.3em;
+button {
+  border: none;
 }
-.p-custom{
-    padding-top: 1.5rem;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+.normal-text {
+  font-size: 17px;
 }
+.nav-border {
+  border-left: 5px solid #1ab394;
+}
+.custom-btn {
+  width: 100%;
+  text-align: left;
+  /* background: !important; */
+}
+.custom-btn:hover {
+  background: #283744 !important;
+  transition: 0.6s;
+}
+.padding-34em {
+  padding-left: 3.3em;
+}
+.p-custom {
+  padding-top: 1.5rem;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.rotate {
+  animation-name: rotateinfinte;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform: rotateZ(0deg);
+}
+@keyframes rotateinfinte {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.border-custom {
+  top: 200px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  right: 0px;
+}
+
 @media screen and (max-width: 600px) {
-    .p-custom{
-        padding-left: 1.5rem !important;
-        padding-right: 1.5rem !important;
-        padding-top: 1rem !important;
-    }
+  .p-custom {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    padding-top: 1rem !important;
+  }
 }

@@ -87,9 +87,23 @@ const appoint = [
   { text: "Please", time: "09:45 pm" },
 ];
 
+function SettingButton() {
+  return (
+    <>
+      <a>
+        <div className="position-fixed icon-bg px-3 py-2 text-white border-custom">
+          <h4 className="m-0 p-0 rotate">
+            <i class="bi bi-gear"></i>
+          </h4>
+        </div>
+      </a>
+    </>
+  );
+}
 export default function AdminDashboard() {
   return (
     <div>
+      <SettingButton />
       <div className="row m-0 p-0">
         <div className="col-2 bg-nav p-0 m-0 d-none d-sm-block">
           <SideNav />
