@@ -84,6 +84,9 @@ button {
     transform: rotateZ(360deg);
   }
 }
+.d-sm-block{
+    transition: 1s !important;
+}
 
 .border-custom {
   top: 200px;
