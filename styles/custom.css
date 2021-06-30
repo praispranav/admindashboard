@@ -54,14 +54,18 @@ button {
 .custom-btn {
   width: 100%;
   text-align: left;
-  /* background: !important; */
+  padding: 0.25rem 1rem !important; 
 }
 .custom-btn:hover {
   background: #283744 !important;
-  transition: 0.6s;
+  transition: 0.5s;
 }
 .padding-34em {
-  padding-left: 3.3em;
+  padding-left: 3.4em !important;
+}
+.padding-34em:hover{
+    color:white;
+    transition: 0.1s;
 }
 .p-custom {
   padding-top: 1.5rem;
@@ -93,6 +97,29 @@ button {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   right: 0px;
+}
+.accordion-button:not(.collapsed){
+    color: white !important;
+    box-shadow: none !important;
+    border-left: 5px solid #1ab394;
+    background: #253a4d !important;
+    transition: 0.4s;
+}
+.accordion-button:focus{
+    box-shadow: none;
+}
+
+.accordion-button::after{
+    background-image: url('/down.png');
+}
+.accordion-button:not(.collapsed)::after{
+    background-image: url('/down.png');
+}
+.letter-spacing{
+    letter-spacing: 0.6px !important;
+}
+.bg-nav-dark{
+    background-color: #253a4d;
 }
 
 @media screen and (max-width: 600px) {
