@@ -65,11 +65,13 @@ button{
 }
 .p-custom{
     padding-top: 1.5rem;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 @media screen and (max-width: 600px) {
     .p-custom{
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        padding-top: 1rem;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        padding-top: 1rem !important;
     }
 }
