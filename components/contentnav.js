@@ -1,13 +1,13 @@
 import React from "react";
 
-export default function ContentNav() {
+export default function ContentNav(props) {
   return (
     <>
       <div className="p-3 px-4 m-0 row align-items-center justify-content-between">
         <div className=" col-4">
           <div className="d-flex">
             <div className=" icon-bg rounded p-1 px-2 ">
-              <h4 className="m-0 p-0">
+              <h4 onClick={()=> props.toogleNav()} className="m-0 p-0">
                 <i className="bi bi-list text-white"></i>
               </h4>
             </div>

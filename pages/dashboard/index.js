@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useState } from "react";
 import SideNav from "../../components/nav";
 import ContentNav from "../../components/contentnav";
 import Appointments from "../../components/appointments";
@@ -101,15 +101,16 @@ function SettingButton() {
   );
 }
 export default function AdminDashboard() {
+    const [ toogle, settoogle ] = useState(true)
   return (
     <div>
       <SettingButton />
       <div className="row m-0 p-0">
-        <div className="col-2 bg-nav p-0 m-0 d-none d-sm-block">
+        <div className={`col-2 bg-nav p-0 m-0 d-none ${toogle ? "d-sm-block" : ""}`}>
           <SideNav />
         </div>
-        <div className="col-12 col-sm-12 col-md-10 bg-content p-0">
-          <ContentNav />
+        <div className={`col-12 col-sm-12 bg-content p-0 ${toogle? "col-md-10": "col-md-12"}`}>
+          <ContentNav toogleNav={()=> settoogle(!toogle)} />
 
           {/* SECTION1 */}
           <div className="bg-white p-4 border">
