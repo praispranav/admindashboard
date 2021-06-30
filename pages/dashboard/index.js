@@ -93,7 +93,7 @@ function SettingButton() {
       <a>
         <div className="position-fixed icon-bg px-3 py-2 text-white border-custom">
           <h4 className="m-0 p-0 rotate">
-            <i class="bi bi-gear"></i>
+            <i className="bi bi-gear"></i>
           </h4>
         </div>
       </a>

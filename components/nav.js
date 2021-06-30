@@ -99,46 +99,6 @@ export default function SideNav() {
               </div>
             </div>
           </div>
-          {/* Accordin 2 */}
-          {/* <div className="">
-              <button
-              id="panelsStayOpen-headingThree"
-                className=" accordion-button p-0  custom-btn bg-nav text-light-black collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseThree"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseThree"
-              >
-                <div className="d-flex align-items-center">
-                  <i className="bi bi-bar-chart mx-2 extra-small"></i>
-                  <p className="normal-text p-0 m-0">Another One</p>
-                </div>
-              </button>
-            <div
-              id="panelsStayOpen-collapseThree"
-              className="accordion-collapse collapse"
-              aria-labelledby="panelsStayOpen-headingThree"
-            >
-              <div className="nav-border m-0">
-                <button className="padding-34em py-2 custom-btn bg-nav text-light-black">
-                  Dashboard 1
-                </button>
-                <button className="padding-34em py-2 custom-btn bg-nav text-light-black">
-                  Dashboard 1
-                </button>
-                <button className="padding-34em py-2 custom-btn bg-nav text-light-black">
-                  Dashboard 1
-                </button>
-                <button className="padding-34em py-2 custom-btn bg-nav text-light-black">
-                  Dashboard 1
-                </button>
-                <button className="padding-34em py-2 custom-btn bg-nav text-light-black">
-                  Dashboard 1
-                </button>
-              </div>
-            </div> */}
-          {/* </div> */}
         </div>
       </div>
     </>
