@@ -122,10 +122,58 @@ button {
     background-color: #253a4d;
 }
 
-@media screen and (max-width: 600px) {
+
+
+p{
+  font-size: calc(12px + .3vw);
+}
+
+small{
+  font-size: calc(10px + .2vw);
+}
+
+.search-input:focus{
+  border: none !important;
+}
+input:focus{
+  border: none !important;
+}
+.transition-sidenav{
+  width: 0%;
+  overflow: hidden;
+  transition: width 1s;
+  z-index: -1000 !important;
+}
+.transition-content{
+  width: 100%;
+  overflow: hidden;
+  transition: width 1s;
+}
+
+
+@media screen and (max-width: 700px) {
   .p-custom {
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
     padding-top: 1rem !important;
+  }
+  .mobile-sidebar{
+    position: fixed !important;
+    top:0 !important;
+    /* display: none; */
+    overflow-x: hidden;
+    overflow-y:auto;
+    height: 100vh;
+    z-index: 1000 !important;
+  }
+  .display-true{
+    /* display: block; */
+    width: 100vw !important;
+    transition: width 1s !important;
+  }
+  .display-false{
+    /* display: none; */
+    width: 0vw !important;
+    transition: width 1s !important;
   }
 }

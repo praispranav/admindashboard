@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import SideNav from "../../components/nav";
 import ContentNav from "../../components/contentnav";
 import Appointments from "../../components/appointments";
@@ -7,6 +7,7 @@ import Progress from "../../components/progress";
 import Comments from "../../components/comments";
 import Card from "../../components/card";
 import User from "../../components/user";
+import closebutton from "../../public/close.png";
 
 const userlist = [
   {
@@ -87,6 +88,12 @@ const appoint = [
   { text: "Please", time: "09:45 pm" },
 ];
 
+const dropdownmenu = [
+  { link: "#", text: "Action" },
+  { link: "#", text: "Action" },
+  { link: "#", text: "Action" },
+  { link: "#", text: "Action" },
+];
 function SettingButton() {
   return (
     <>
@@ -100,17 +107,35 @@ function SettingButton() {
     </>
   );
 }
+
+// mobile-sidebar display-true ${toogle ? " " : "transition-sidenav display-false"}
 export default function AdminDashboard() {
-    const [ toogle, settoogle ] = useState(true)
+  const [toogle, settoogle] = useState(true);
   return (
     <div>
       <SettingButton />
       <div className="row m-0 p-0">
-        <div className={`col-2 bg-nav p-0 m-0 d-none ${toogle ? "d-sm-block" : ""}`}>
+        <div
+          className={` bg-nav p-0 m-0 col-12 col-sm-2 mobile-sidebar ${
+            toogle ? "display-true" : "display-false transition-sidenav "
+          }  `}
+        >
+          <img
+            src="/close.png"
+            onClick={() => settoogle(!toogle)}
+            className={`position-fixed d-sm-none d-block ${
+              toogle ? "" : "d-none"
+            } `}
+            style={{ width: "30px", top: "50px", right: "50px" }}
+          />
           <SideNav />
         </div>
-        <div className={`col-12 col-sm-12 bg-content p-0 ${toogle? "col-md-10": "col-md-12"}`}>
-          <ContentNav toogleNav={()=> settoogle(!toogle)} />
+        <div
+          className={`col-12 col-sm-12 bg-content p-0 ${
+            toogle ? "col-md-10" : "transition-content"
+          }`}
+        >
+          <ContentNav toogleNav={() => settoogle(!toogle)} />
 
           {/* SECTION1 */}
           <div className="bg-white p-4 border">
@@ -123,9 +148,8 @@ export default function AdminDashboard() {
                 {/* date start here */}
                 <div className="mt-4">
                   {appoint.map((item, index) => (
-                    <div className="mt-3">
+                    <div className="mt-3" key={item.text}>
                       <Appointments
-                        key={index}
                         text={item.text}
                         order={index + 1}
                         time={item.time}
@@ -148,11 +172,13 @@ export default function AdminDashboard() {
           <div className="row m-0 p-0">
             <div className="col-12 col-sm-4 p-4">
               <Card
+                dropdown={dropdownmenu}
                 margin={false}
+                setting={dropdownmenu}
                 text={
                   <>
                     {"New Data For Report"}
-                    <span className="m-0 p-1 mx-2 px-2 icon-bg rounded text-white extra-small">
+                    <span className="m-0 p-1 mx-1 px-2 icon-bg rounded text-white extra-small-small">
                       IN+
                     </span>
                   </>
@@ -168,12 +194,19 @@ export default function AdminDashboard() {
 
                   <div className="">
                     <h6 className="p-0 m-0 bg-dark text-white">Chart</h6>
-                    <p className="extra-small p-0 m-0 mt-1">$ 456, 323</p>
+                    <p className="extra-small p-0 m-0 mt-1">
+                      <b>$ 456, 323</b>
+                    </p>
                   </div>
                 </div>
               </Card>
 
-              <Card margin={true} text="Read below comments">
+              <Card
+                dropdown={dropdownmenu}
+                setting={dropdownmenu}
+                margin={true}
+                text="Read below comments"
+              >
                 <div>
                   {CommentsData.map((item, index) => (
                     <Comments
@@ -215,7 +248,12 @@ export default function AdminDashboard() {
               </div>
             </div>
             <div className="col-12 col-sm-4 p-4">
-              <Card margin={false} text="Alpha Projects">
+              <Card
+                dropdown={dropdownmenu}
+                setting={dropdownmenu}
+                margin={false}
+                text="Alpha Projects"
+              >
                 <div className="">
                   <div className="bg-light p-4">
                     <h5>You have meeting today! </h5>
