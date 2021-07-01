@@ -20,7 +20,7 @@ export default function Card(props) {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i className="bi bi-chevron-compact-up text-grey-dark mx-1"></i>
+                <i className="bi bi-chevron-compact-up text-grey-dark mx-2"></i>
               </a>
               <ul
                 className="dropdown-menu"
@@ -58,7 +58,7 @@ export default function Card(props) {
                 ))}
               </ul>
             </div>
-            <i className="bi bi-x text-grey-dark mx-1"></i>
+            <i className="bi bi-x text-grey-dark mx-2"></i>
           </div>
         </div>
         {props.children}

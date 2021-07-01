@@ -5,7 +5,7 @@ export default function Comments(props) {
     <>
       <div className="p-3 border-bottom">
         <p>
-          <a href={props.link} className="text-green">@{props.user}</a><small>{props.text}</small>
+          <a href={props.link} className="text-green">@{props.user}</a><small>{" " + props.text}</small>
         </p>
         <p className="extra-small p-0 m-0">
           {" "}

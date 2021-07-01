@@ -28,10 +28,10 @@ export default function ContentNav(props) {
 
             <div className="mx-3 d-none d-sm-block">
               <h5 className="p-0 m-0">
-                <div className="dropdown">
+                <div className="">
                   <button
                     className="text-grey"
-                    type="button"
+                   
                     id="dropdownMenuButton1"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -63,7 +63,7 @@ export default function ContentNav(props) {
             </div>
             <div className="mx-2 d-none d-sm-block">
               <h5 className="p-0 m-0">
-                <div className="dropdown">
+                <div className="">
                   <button
                     className="text-grey"
                     type="button"
@@ -101,7 +101,7 @@ export default function ContentNav(props) {
             </div>
             <div className="mx-2">
               <h5 className="p-0 m-0 d-none d-sm-block">
-                <div className="dropdown">
+                <div className="">
                   <button
                     className="text-grey"
                     type="button"

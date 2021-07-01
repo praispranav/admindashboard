@@ -7,7 +7,7 @@ import Progress from "../../components/progress";
 import Comments from "../../components/comments";
 import Card from "../../components/card";
 import User from "../../components/user";
-import closebutton from "../../public/close.png";
+import Image from "next/image";
 
 const userlist = [
   {
@@ -17,13 +17,13 @@ const userlist = [
     time1: " Today 05:45 pm - 24/12/2020",
   },
   {
-    name: "Pranav Kumar",
+    name: "Ram Kumar",
     text: "Some ltext Here for. lorem ipsum",
     time2: "10 min ago",
     time1: " Today 05:45 pm - 24/12/2020",
   },
   {
-    name: "Pranav Kumar",
+    name: "Mohan Kumar",
     text: "Some ltext Here for. lorem ipsum",
     time2: "10 min ago",
     time1: " Today 05:45 pm - 24/12/2020",
@@ -112,22 +112,34 @@ function SettingButton() {
 export default function AdminDashboard() {
   const [toogle, settoogle] = useState(true);
   return (
-    <div>
+    <div id="scrolltotop">
       <SettingButton />
       <div className="row m-0 p-0">
+        <a
+          className=" shadow position-fixed pt-2 px-2 m-0 p-0 icon-bg rounded"
+          style={{
+            bottom: "50px",
+            right: "50px",
+            width: "65px",
+            height: "40px",
+          }}
+          href="#scrolltotop"
+        > <p className="p-0 m-0 text-white">Top <i class="bi bi-arrow-up"></i></p>
+        </a>
         <div
           className={` bg-nav p-0 m-0 col-12 col-sm-2 mobile-sidebar ${
             toogle ? "display-true" : "display-false transition-sidenav "
           }  `}
         >
-          <img
-            src="/close.png"
+          <div
             onClick={() => settoogle(!toogle)}
             className={`position-fixed d-sm-none d-block ${
               toogle ? "" : "d-none"
             } `}
             style={{ width: "30px", top: "50px", right: "50px" }}
-          />
+          >
+            <Image src="/close.png" width="30px" height="30px" />
+          </div>
           <SideNav />
         </div>
         <div
@@ -140,7 +152,7 @@ export default function AdminDashboard() {
           {/* SECTION1 */}
           <div className="bg-white p-4 border">
             <div className="row m-0">
-              <h6 className="display-6 text-grey">Welcome</h6>
+              <h6 className="text-grey">Welcome</h6>
               <div className="col-12 col-sm-3">
                 <p>
                   <small>You have 42 messages and 6 notifications</small>
@@ -256,7 +268,7 @@ export default function AdminDashboard() {
               >
                 <div className="">
                   <div className="bg-light p-4">
-                    <h5>You have meeting today! </h5>
+                    <h6>You have meeting today! </h6>
                     <p className="extra-small">
                       Meeting is on 6:00am. Check your schedule to see detail.
                     </p>
@@ -264,6 +276,9 @@ export default function AdminDashboard() {
                 </div>
               </Card>
             </div>
+                    <div className="bg-white px-3 py-2 w-100">
+                      Footer
+                    </div>
           </div>
         </div>
       </div>

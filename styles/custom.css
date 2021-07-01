@@ -8,6 +8,9 @@
 .icon-bg {
   background: #1ab394;
 }
+.icon-bg:hover {
+  background: #13836d;
+}
 
 .text-grey {
   color: #888888 !important;
@@ -149,6 +152,7 @@ input:focus{
   overflow: hidden;
   transition: width 1s;
 }
+
 
 
 @media screen and (max-width: 700px) {
